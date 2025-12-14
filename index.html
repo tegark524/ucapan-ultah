@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu!</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Birthday Cake Section (Initial View) -->
+        <section id="birthday-cake" class="full-screen active">
+            <div class="cake-content">
+                <h1 class="birthday-title">Happy Birthday <span class="highlight">Kamu!</span></h1>
+                <div class="cake-animation">
+                    <!-- Cake will be inserted from birthday-cake.html -->
+                </div>
+                <div class="scroll-prompt">
+                    <span>Scroll Down</span>
+                    <div class="bounce-arrow">↓</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section id="countdown" class="full-screen">
+            <div class="countdown-container">
+                <h2>Rewinding time to your special day...</h2>
+                <div class="countdown-display">
+                    <div class="date-box">
+                        <span id="countdown-year">2023</span>
+                        <span>Year</span>
+                    </div>
+                    <div class="date-box">
+                        <span id="countdown-month">05</span>
+                        <span>Month</span>
+                    </div>
+                    <div class="date-box">
+                        <span id="countdown-day">07</span>
+                        <span>Day</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Birthday Message Section -->
+        <section id="birthday-message" class="full-screen">
+            <div class="message-container">
+                <div class="confetti-container"></div>
+                <h1 class="big-message">🎉 Congratulations on your <span class="highlight">21st</span> birthday, <span
+                        class="highlight">Kak Kamu!</span> 🎉</h1>
+                <div class="button-container">
+                    <button id="special-button" class="fun-button">Klik ini, ya!</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bible Book Section -->
+        <section id="bible-book" class="full-screen">
+            <div class="book-container">
+                <div class="book-cover">
+                    <h3>Special Message</h3>
+                </div>
+                <div class="book-content">
+                    <div class="page left-page">
+                        <h4>Jeremiah 29:11</h4>
+                        <p>"For I know the plans I have for you," declares the Lord, "plans to prosper you and not to
+                            harm you, plans to give you hope and a future."</p>
+                    </div>
+                    <div class="page right-page">
+                        <h4>Selamat ultah Kamu</h4>
+                        <p>Semoga panjang umur.sehat selalu,dilancarkan kuliahnya. dan yang terpenting selalu tumbuh
+                            dalam Kristus ya... <br>
+                            God Bless Kamu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

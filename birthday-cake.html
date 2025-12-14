@@ -1,0 +1,250 @@
+<div class="cake animate-cake">
+    <div class="plate"></div>
+    <div class="layer layer-bottom animate-layer"></div>
+    <div class="layer layer-middle animate-layer delay1"></div>
+    <div class="layer layer-top animate-layer delay2"></div>
+    <div class="icing animate-icing"></div>
+    <div class="drip drip1 animate-drip delay1"></div>
+    <div class="drip drip2 animate-drip delay2"></div>
+    <div class="drip drip3 animate-drip delay3"></div>
+    <div class="candle animate-candle">
+        <div class="flame"></div>
+    </div>
+    <div class="decoration animate-deco">21</div>
+</div>
+
+<style>
+    .cake {
+        position: relative;
+        width: 200px;
+        height: 120px;
+        margin: 40px auto;
+    }
+
+    .plate {
+        width: 240px;
+        height: 30px;
+        background: #f8f8f8;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -10px;
+        left: -20px;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .layer {
+        position: absolute;
+        width: 200px;
+        border-radius: 10px;
+        opacity: 0;
+    }
+
+    .layer-bottom {
+        height: 60px;
+        background: linear-gradient(to right, #f8c9d8, #f8a5be);
+        bottom: 0;
+        box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .layer-middle {
+        height: 40px;
+        background: linear-gradient(to right, #f8a5be, #ff85a2);
+        bottom: 60px;
+        width: 180px;
+        left: 10px;
+        box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .layer-top {
+        height: 30px;
+        background: linear-gradient(to right, #ff85a2, #ff6b8b);
+        bottom: 100px;
+        width: 160px;
+        left: 20px;
+        box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .icing {
+        position: absolute;
+        width: 160px;
+        height: 15px;
+        background: white;
+        bottom: 115px;
+        left: 20px;
+        border-radius: 10px 10px 0 0;
+        opacity: 0;
+    }
+
+    .drip {
+        position: absolute;
+        background: white;
+        border-radius: 0 0 10px 10px;
+        opacity: 0;
+    }
+
+    .drip1 {
+        width: 15px;
+        height: 20px;
+        left: 30px;
+        bottom: 95px;
+    }
+
+    .drip2 {
+        width: 10px;
+        height: 15px;
+        left: 80px;
+        bottom: 100px;
+    }
+
+    .drip3 {
+        width: 12px;
+        height: 18px;
+        left: 130px;
+        bottom: 97px;
+    }
+
+    .candle {
+        position: absolute;
+        width: 10px;
+        height: 30px;
+        background: linear-gradient(to right, #a2f8ff, #d1f0ff);
+        bottom: 130px;
+        left: 95px;
+        z-index: 10;
+        opacity: 0;
+    }
+
+    .flame {
+        position: absolute;
+        width: 12px;
+        height: 20px;
+        background: #ffef9f;
+        border-radius: 50% 50% 20% 20%;
+        bottom: 30px;
+        left: -1px;
+        animation: flicker 1s infinite alternate;
+        box-shadow: 0 0 15px #ffef9f;
+    }
+
+    .decoration {
+        position: absolute;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        z-index: 5;
+        opacity: 0;
+    }
+
+    /* Animations */
+    .animate-cake {
+        animation: pop-in 0.6s ease-out;
+    }
+
+    .animate-layer {
+        animation: fade-slide-in 0.5s forwards;
+    }
+
+    .animate-icing {
+        animation: fade-in 0.6s 0.5s forwards;
+    }
+
+    .animate-drip {
+        animation: drip-drop 0.5s forwards;
+    }
+
+    .animate-candle {
+        animation: fade-in 0.6s 1s forwards;
+    }
+
+    .animate-deco {
+        animation: scale-in 0.6s 1.2s forwards;
+    }
+
+    .delay1 {
+        animation-delay: 0.2s !important;
+    }
+
+    .delay2 {
+        animation-delay: 0.4s !important;
+    }
+
+    .delay3 {
+        animation-delay: 0.6s !important;
+    }
+
+    @keyframes pop-in {
+        0% {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-slide-in {
+        0% {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes drip-drop {
+        0% {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes scale-in {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes flicker {
+
+        0%,
+        100% {
+            transform: scale(1, 1);
+            opacity: 1;
+        }
+
+        50% {
+            transform: scale(0.9, 1.1);
+            opacity: 0.8;
+        }
+    }
+</style>
